@@ -48,12 +48,12 @@ ZBX_SERVER_IP="10.3.10.47"      ## Need to check
 # zabbix mysql 相关的服务信息
 
 ZBX_MYSQL_IP="10.3.10.47"       ## Need to check
-ZBX_MYSQL_ROOT_PASS="dataman1234"       ## Need to check
-ZBX_MYSQL_CHECK_USER="zabbix_check"     ## Need to check
-ZBX_MYSQL_CHECK_PASS="zabbix1234"       ## Need to check
-ZBX_MYSQL_USER="zabbix"                 ## Need to check
-ZBX_MYSQL_PASS="zabbix_server"          ## Need to check
-ZBX_MYSQL_DATABASE="zabbix"             ## Need to check
+ZBX_MYSQL_ROOT_PASS="rootpass"       ## Need to check
+ZBX_MYSQL_CHECK_USER="zabbix_check"     
+ZBX_MYSQL_CHECK_PASS="zabbixpass"       ## Need to check
+ZBX_MYSQL_USER="zabbix"                 
+ZBX_MYSQL_PASS="zabbixpass"          ## Need to check
+ZBX_MYSQL_DATABASE="zabbix"          
 
 # sendmail 相关信息
 ISDEPLOY_SENDMAIL=false            ## Need to check， 是否部署sendmail服务
