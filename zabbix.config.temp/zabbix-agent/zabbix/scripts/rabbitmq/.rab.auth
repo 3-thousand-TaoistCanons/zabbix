@@ -1,0 +1,3 @@
+USERNAME=admin
+PASSWORD=admin
+CONF=/etc/zabbix/zabbix_agentd.conf

@@ -1,0 +1,3 @@
+{
+    "http://--CONFIGSERVER_IP--:--CONFIGSERVER_PORT--/config/zabbix/zabbix-web/conf.d/zabbix.conf": "/etc/nginx/conf.d/zabbix.conf"
+}
