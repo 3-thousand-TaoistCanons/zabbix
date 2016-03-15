@@ -80,7 +80,7 @@ MAIL_PORT="5001"					## sendmail 服务端口
 ./install-zabbix-server.sh
 ```
 
-zabbix server 管理页面
+zabbix server 管理页面 http://x.x.x.x:9280/
 
 default user: admin
 
