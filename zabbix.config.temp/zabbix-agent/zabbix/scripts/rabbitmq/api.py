@@ -76,7 +76,7 @@ class RabbitMQAPI(object):
         if not filters:
             filters = [{}]
 
-        rdatafile = tempfile.NamedTemporaryFile(delete=True)
+        rdatafile = tempfile.NamedTemporaryFile(delete=False)
 
         for queue in self.call_api('queues'):
             success = False
