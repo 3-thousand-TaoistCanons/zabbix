@@ -76,6 +76,9 @@ if [ "$ISDEPLOY_SENDMAIL" = "true" ];then
 	check_sendmail
 fi
 
+echo "install zabbix agent"
+$BASE_DIR/config/zabbix/zabbix-agent/install.sh
+
 echo 
 echo "deploy zabbix-mysql"
 ./zabbix-mysql.sh
@@ -83,7 +86,9 @@ check_mysql_health
 
 echo 
 echo "init zabbix db"
-./init_zabbix_db.sh && echo "init zabbix db ok" || (echo "init zabbix db error !!!" && exit 1)
+if [ "$ISINIT_MYSQL"="true" ];then
+  ./init_zabbix_db.sh && echo "init zabbix db ok" || (echo "init zabbix db error !!!" && exit 1)
+fi
 
 echo 
 echo "deplop zabbix-server"
