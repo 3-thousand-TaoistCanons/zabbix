@@ -11,11 +11,11 @@ Depends: perl (>= 5.18.1-4build1), perlapi-5.18.1, libc6 (>= 2.4)
 Suggests: libclone-perl (>= 0.34), libmldbm-perl, libnet-daemon-perl, libplrpc-perl, libsql-statement-perl (>= 1.402)
 Breaks: libdbd-anydata-perl (<< 0.11+), libdbd-csv-perl (<< 0.3600+), libsql-statement-perl (<< 1.33+)
 Filename: debs/libdbi-perl_1.630-1_amd64.deb
-Size: 880428
-MD5sum: c4285d039feb0029b06c3ce1e1ffb342
-SHA1: f6effe51ec6bb118b156c57472abb3cab11d893c
-SHA256: 484239e66ed66aa7879443cbf72c99b53edb6c8859b15e379ddd2adc7eff288b
-SHA512: 32efadf600979891d9e7b68ada1298d01127d2265688086c2785ad255cc68f697985459bceb118258b90ad34c21e48722f6ad406f85dfb256130925c57e48573
+Size: 883778
+MD5sum: 3ac7a3783657527cf6039dc3db8e7b79
+SHA1: 885dfde332d5cc75f7b4b904b91f584293986c07
+SHA256: f96697a7b7af948b70ea985d2e6294d02ead5cf7144bca5341b750a5821f7878
+SHA512: 39264c74069d85d38282cb2660432ea2e43aaf4db1a75b7a8a1c5808efb49d59512f6bc6991cf298c7524ae70eb59bb3cc8efd0080223f8e3888d1dd82ea4e77
 Description: Perl Database Interface (DBI)
  DBI (DataBase Interface) is a Perl framework that provides a common interface
  to access various backend databases in a uniform manner. DBD (DataBase Driver)
@@ -62,6 +62,33 @@ Description: MySQL database common files, e.g. /etc/mysql/my.cnf
 Multi-Arch: foreign
 Homepage: http://dev.mysql.com/
 
+Package: libsensors4
+Priority: optional
+Section: libs
+Installed-Size: 142
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Aurelien Jarno <aurel32@debian.org>
+Architecture: amd64
+Source: lm-sensors
+Version: 1:3.3.4-2ubuntu1
+Depends: libc6 (>= 2.14)
+Pre-Depends: multiarch-support
+Suggests: lm-sensors
+Filename: debs/libsensors4_13a3.3.4-2ubuntu1_amd64.deb
+Size: 28182
+MD5sum: 336ecd89d558b88deb9c293a46f71176
+SHA1: e8b00faf5b9f6399fb7a65ac1142a9e247bfb3b0
+SHA256: a4c3ec107f0b67c8874ebf7b3f4cdf1203f4f7df471bffd9b052afbfea8c4494
+SHA512: 48fa1d7bf7b6d2d0e91f3174c7277be31bee4f4b9610493b567411e4d9f9d8b6598c5ecbe139966f7d8f3baeb1b23c5f6e0b7f01556519a1e794588c25d043f5
+Description: library to read temperature/voltage/fan sensors
+ Lm-sensors is a hardware health monitoring package for Linux. It allows you
+ to access information from temperature, voltage, and fan speed sensors. It
+ works with most newer systems.
+ .
+ This package contains a shared library for querying lm-sensors.
+Multi-Arch: same
+Homepage: http://www.lm-sensors.org
+
 Package: libplrpc-perl
 Priority: optional
 Section: perl
@@ -73,11 +100,11 @@ Version: 0.2020-2
 Depends: perl (>= 5.6.0-16), libstorable-perl | perl-modules (>= 5.8.0-10), libnet-daemon-perl
 Suggests: libcompress-zlib-perl
 Filename: debs/libplrpc-perl_0.2020-2_all.deb
-Size: 36908
-MD5sum: 7c80a9b72f2bc455dea33c2e04cb29d9
-SHA1: bae333178e9aab0d07f5eaf1019cac93499a3f0d
-SHA256: 40049047fcd113b65307e66eb171d0e1e8504205ca973030a8a71a4a8caa2a89
-SHA512: 38320444ee2b4b5d07328d9f16e656c80cfd6ff84c0a33ab96d661cd5ce0a4eb00a428b4be217e4340acd66a9a3e082a5cb18d1718cfb1d21c7a41df05a10e6e
+Size: 40256
+MD5sum: b4685c6c88fc577fc355cacf08525688
+SHA1: bf2aed77d11104d7c94a44ea6cf416776a696f83
+SHA256: 591e7e33f8dd2b937109c44f860323db080c84ce94021ebced444be0646851e0
+SHA512: 36f50381f7fc1536643b9f32bd1172d1a0b527baa886ca0f672426d96719c9549869a561c458956a896a05dffdbda6b9decd3bc31b4750c75f8c2ea0a002fb26
 Description: Perl extensions for writing PlRPC servers and clients
  Perl RPC simplifies the writing of Perl based client/server
  applications.  RPC::PlServer is the package used on the server side,
@@ -250,11 +277,11 @@ Architecture: amd64
 Version: 2.31-1
 Depends: perl (>= 5.18.1-4), perlapi-5.18.1, libc6 (>= 2.15)
 Filename: debs/libterm-readkey-perl_2.31-1_amd64.deb
-Size: 28296
-MD5sum: 01f96b91a1a0f28ff783088ec996e04e
-SHA1: 2ac52e872b21c7d1e63c6a3546b3778fab6258d8
-SHA256: a1b3e0c2630e50d0a7602e0909b3687b537aa3cb99d945450962004aaec417f5
-SHA512: 1ffd88f5c67bbedbe2384e7dc9ed35942fe1c9e5b6275146f22c629ae9fb582d9876f28989e4731956152fbf494c8d44f67fa6fa73dd954ebf2c3d03078cdc43
+Size: 31640
+MD5sum: 341fd129784d7fa6bd0bca0e7c82b37d
+SHA1: 231e591404f9acfb27f7e2657213cce74cbb19af
+SHA256: aa840fe6b3544f2ced4dbd9d082358819142bc31247a2dc7672d8ec398f587ea
+SHA512: 532382fafb08478ec8bf02390401b38e8e9d4c38477db714703d326e3bd572b933bff43b615400e5c876431a986ad89370a99e4e4ef804ec5e1c1c972fd3f8d8
 Description: perl module for simple terminal control
  Term::ReadKey is a compiled perl module dedicated to providing simple
  control over terminal driver modes (cbreak, raw, cooked, etc.,) support for
@@ -274,11 +301,11 @@ Architecture: amd64
 Version: 4.025-1
 Depends: perl (>= 5.18.1-4build1), perl-dbdabi-94, perlapi-5.18.1, libc6 (>= 2.4), libmysqlclient18 (>= 5.5.13-1), libdbi-perl
 Filename: debs/libdbd-mysql-perl_4.025-1_amd64.deb
-Size: 100232
-MD5sum: e0f29bebba3fa1e72f75493a7acda458
-SHA1: dabfdeda4c0e46886faed83aea88fa0d6315bc95
-SHA256: 68a84123ff1ee5017a1b1fa9deae74a2aa721fed6acf7b5cc6a7a12254abe93f
-SHA512: 8a5f031aeed6cbf29e399e3d11df3f69d8442d6cf9b17c2c5d41c16abd8b767390f1cbb0cc85ae5d37f375f6cca82592e9fcfc2220f0558ded9bf5ef2432e6af
+Size: 103580
+MD5sum: a98e4e238c4ec1a98ddbd9bedb5f97b2
+SHA1: ad14a4f227f6e3c8480ff284df981b465da1a7d8
+SHA256: 885e83f848237b5193d1705758ce8c20af0d533b003f8a6bbb3f7e8d602a945c
+SHA512: c58dc378e5550a78f446cdb28ccede10dbe5b80b5362fa312e448ae5a0b0e833c9c9d5e51f979ce1a3943e11c76f96a928dc909fe48c6091ee443367b459ef3c
 Description: Perl5 database interface to the MySQL database
  DBD::mysql is the Perl5 Database Interface driver for the MySQL
  database. In other words: DBD::mysql is an interface between the Perl
@@ -303,11 +330,11 @@ Architecture: all
 Version: 1.10-40
 Depends: netcat-traditional (>= 1.10-39)
 Filename: debs/netcat_1.10-40_all.deb
-Size: 7612
-MD5sum: b5bdb6f908916b6dff9e3e950670ff11
-SHA1: fae4ccf066ee89986e0336e7dbc23d3b6eff0959
-SHA256: a5543deec6dbbcc7c955e50300bcf2b082424d5cc74b4ad3f303466e896f9957
-SHA512: 826bc2a02b54482abf4e669c4f4d038c6965750312109e8994392594e7754eef60d2f8eda9591c163578c72b53533bfcd55ac52837041b680dbfef2b88c89e4c
+Size: 11790
+MD5sum: cac91c709dbe9693a4bfce879b6f7f4b
+SHA1: 5f863351128b62b65f46a8d3e779dcea57912c85
+SHA256: b18418801a2f12d153e7ff10ba0b96658fc98abf4edf8f49f42f7c4ecf1f57c6
+SHA512: 49875d07672b4282124388960b40d46623e82320c60d983e8952675656b7ca495cc97c4af2b1a35f61856917fa68e4a09d0ca1c555058b9fd5c06ac0d30ab5fa
 Description: TCP/IP swiss army knife -- transitional package
  This is a "dummy" package that depends on lenny's default version of
  netcat, to ease upgrades. It may be safely removed.
@@ -351,11 +378,11 @@ Depends: perl, libclone-perl, libparams-util-perl
 Recommends: libdbi-perl (>= 1.616), libtext-soundex-perl | perl (<< 5.17.0)
 Breaks: libdbd-anydata-perl (<< 0.09+), libdbd-csv-perl (<< 0.3000), libdbi-perl (<< 1.612)
 Filename: debs/libsql-statement-perl_1.405-1_all.deb
-Size: 180992
-MD5sum: f0b299497e6a7fd1c084d24ce8a79496
-SHA1: e2b9dfbe5a627c9e82923e2a420854f79f72ebf6
-SHA256: 1f5b024bf605904a5a1d24d6e1998d767d5e74f5ac699b2d913ea4c3ca142d15
-SHA512: 446acb47ef478c3297eb1b76a589245843acbe2177c6c1ea52cbad9003680cceabff046fd2665301a838bce4a436078626c3ef4725f858e3d4eedd8f897a1adc
+Size: 184342
+MD5sum: 9522680c3097b7ff3542123501a48157
+SHA1: 4e76cc1e0b095f0dfbeb8cfad62eeb28637ba216
+SHA256: 3297ce90f01bd1e8c7aff86ab1b480d728978bfa29e57e7b93d6f5547b8d5964
+SHA512: b543447734d7a291c9bfc870228b72d87445ce2fe9bea13457473bd89cc30d8fd2971d4b0b6de2bfa23fd90868c1db4a3f0fd7a6611be5930da841ce696b2637
 Description: module for parsing and processing SQL statements
  SQL::Statement is a Perl module that implements a small, abstract SQL engine.
  This module is not useful itself, but as a base class for deriving concrete
@@ -376,11 +403,11 @@ Version: 1.10-40
 Provides: netcat
 Depends: libc6 (>= 2.15)
 Filename: debs/netcat-traditional_1.10-40_amd64.deb
-Size: 69296
-MD5sum: 1e385d4bf83c92208fe4e28a36f5436e
-SHA1: 76bbfbb5e9e9b20dd7fb9e0e88830fc9858344ba
-SHA256: 88e516518a2e7a4875a1d6b262557bd44785baa2978b12d767baed644ea8401a
-SHA512: 1600d80e9472651f338a02e94985fc9a119388d597897064dc4be9a788caebadb46cf3a3b5d5c02b40e5598e1a4ee373f730e13874d69beca811617fb96d7ac1
+Size: 73480
+MD5sum: cc1ac2e7099e71925f647d6b5ffbd485
+SHA1: e55753d1813d50efba83608623f2da6e22932792
+SHA256: b3cc288a392351d2349f1c55410fc43dc1eb473e2ac125fc7b72c463ffbae688
+SHA512: 26e859082cba6495e506279e54a4274fa933087e2eae03bbb931830f6f7e1d7a028f23619b8c1587edc26d614516ddaf587b656c5f988d93b3bc54468f225d27
 Description: TCP/IP swiss army knife
  A simple Unix utility which reads and writes data across network
  connections using TCP or UDP protocol. It is designed to be a reliable
@@ -433,11 +460,11 @@ Version: 2.05-1
 Depends: perl
 Recommends: libfreezethaw-perl
 Filename: debs/libmldbm-perl_2.05-1_all.deb
-Size: 19188
-MD5sum: f381bb8d09fb77a516f8cf5723b118a6
-SHA1: a0c8b6c7444ff344cc600c918465aad4d97430ff
-SHA256: 311ea5a0cf883be02bc26e1c31549ad50a43b0e2cfc6e8ae47858735b896fbd0
-SHA512: cb29bc43021eeb9d8b20daf4600063cccfe7944e8103079e65b50190e0450c28708642ec39d1bed3f8747916535803cf9c9ae76617db9cb147b3eddc90170b0f
+Size: 22532
+MD5sum: 2171039e79acb543018a946f3068858b
+SHA1: 43d54d73c47214137ec4f513b32fb8325837649d
+SHA256: ac1db0a922e88cc17280fa13abc3a7cbae38190747958e303cc15297a3259228
+SHA512: 38799f4859bd25e4eb71ccaf738bf96b5c4647ac054087c3854eb49e8788f854018b8b84a1519197962012436caee6650cf3f0990b49c551e9efb4009f2d77d1
 Description: module for storing multidimensional hash structures in perl tied hashes
  The MLDBM perl module can be used to store multidimensional hash structures
  in tied hashes (including DBM files).
@@ -516,11 +543,11 @@ Depends: bzip2, lsb-base (>= 3.0-6), ucf (>= 2.003), debconf (>= 0.5) | debconf-
 Recommends: cron
 Suggests: isag
 Filename: debs/sysstat_10.2.0-1_amd64.deb
-Size: 287230
-MD5sum: 344c148cecf8dcae69c35df4928ced40
-SHA1: 07558b90c4b6dce8e6a1326e9c2516f4f0e77b03
-SHA256: bddb0f41a8f9bc6a81a112e4ea14ffb791264de745fe941825e460717e1423f3
-SHA512: 0736f7d25298b23bd00297f30516b571e6c0d7b621b5bc352da913346479074f0018f7cb1378f3da14049537e00228b634d77839838e7b31245ab11a7b02d033
+Size: 291420
+MD5sum: 4f25e2ad0d89e457a7079b85a5891e1e
+SHA1: 5b36d1e385b781b206588675b7826af052e8a7b9
+SHA256: d440a83b116ce2268320c387088d4639c949da7f2cada4c6d43c66bdc53bf392
+SHA512: bc7365e0fb58b0c766dc6ee8006a06f6b988dbfabe2cc83a75be83b6ea81b0172adf90e3c825cccced710c304459ef7f303cd9ed9da3fdc0a2f78430ea51cfc3
 Description: system performance tools for Linux
  The sysstat package contains the following system performance tools:
   - sar: collects and reports system activity information;
