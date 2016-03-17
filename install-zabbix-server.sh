@@ -86,7 +86,7 @@ check_mysql_health
 
 echo 
 echo "init zabbix db"
-if [ "$ISINIT_MYSQL"="true" ];then
+if [ "$ISINIT_MYSQL" = "true" ];then
   ./init_zabbix_db.sh && echo "init zabbix db ok" || (echo "init zabbix db error !!!" && exit 1)
 fi
 
