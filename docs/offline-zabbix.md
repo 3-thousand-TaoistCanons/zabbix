@@ -1,4 +1,4 @@
-# 线下部署zabbix server
+# 部署zabbix server
 
 ```
 文档信息
