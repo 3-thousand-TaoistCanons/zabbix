@@ -3,6 +3,7 @@
     "http://--CONFIGSERVER_IP--:--CONFIGSERVER_PORT--/config/zabbix/zabbix-server/php.ini": "/etc/php.ini",
     "http://--CONFIGSERVER_IP--:--CONFIGSERVER_PORT--/config/zabbix/zabbix-server/php-fpm.conf": "/etc/php-fpm.conf",
     "http://--CONFIGSERVER_IP--:--CONFIGSERVER_PORT--/config/zabbix/zabbix-server/php-fpm.d/www.conf": "/etc/php-fpm.d/www.conf",
+    "http://--CONFIGSERVER_IP--:--CONFIGSERVER_PORT--/config/zabbix/zabbix-server/sysctl.sh": "/config/init/sysctl.sh",
     "http://--CONFIGSERVER_IP--:--CONFIGSERVER_PORT--/config/zabbix/zabbix-server/zabbix.conf.php": "/etc/zabbix/web/zabbix.conf.php",
     "http://--CONFIGSERVER_IP--:--CONFIGSERVER_PORT--/config/zabbix/zabbix-server/zabbix_server.conf": "/etc/zabbix/zabbix_server.conf"
 }
