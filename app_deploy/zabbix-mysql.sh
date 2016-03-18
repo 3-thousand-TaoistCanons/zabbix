@@ -2,21 +2,26 @@
 . ../config.cfg
 token=`./get_token.sh`
 
-curl -X POST $BASE_URL/api/v1/applications/deploy \
+curl -X POST $BASE_URL/api/v3/clusters/$SRY_CLUSTERID/apps \
         -H Authorization:$token \
         -H Content-Type:application/json -d '{
-           "appName": "'${SERVICE_PRE}'-mysql",
+           "name": "'${SERVICE_PRE}'-mysql",
            "clusterId": "'$SRY_CLUSTERID'",
-           "containerCpuSize": 1,
+           "cpus": 1,
+           "mem": 1024,
            "containerPortsInfo": [],
-           "containerVolumesInfo": [
+           "instances": 1,
+           "volumes": [
             {
                 "containerPath": "/var/lib/mysql",
                 "hostPath": "/data/lib/mysql"
             }
-          ],
-           "containerMemSize": 3072,
-           "containerNum": "1",
+           ],
+           "imageName": "'$MYSQL_IMAGE_URI'",
+           "imageVersion": "'$MYSQL_IMAGE_VERSION'",
+           "forceImage": false,
+           "constraints": [],
+           "network": "HOST",
            "envs": [
             {
                 "key": "CONFIG_SERVER",
@@ -55,8 +60,6 @@ curl -X POST $BASE_URL/api/v1/applications/deploy \
                 "value": "'$ZBX_MYSQL_DATABASE'"
             }
         	],
-           "imageURI": "'$MYSQL_IMAGE_URI'",
-           "imageversion": "'$MYSQL_IMAGE_VERSION'",
-           "constraints": [["ip", "LIKE", "'$ZBX_MYSQL_IP'" ], ["ip", "UNIQUE"]], 
-           "network": "HOST"
+           "portMappings":[],
+					 "logPaths": []
         }'
