@@ -2,14 +2,20 @@
 . ../config.cfg
 token=`./get_token.sh`
 
-curl -X POST $BASE_URL/api/v1/applications/deploy \
+curl -X POST $BASE_URL/api/v3/clusters/$SRY_CLUSTERID/apps \
         -H Authorization:$token \
         -H Content-Type:application/json -d '{
-           "appName": "'${SERVICE_PRE}'-server",
-           "clusterId": "'$SRY_CLUSTERID'",
-           "containerCpuSize": 0.5,
-           "containerMemSize": 2048,
-           "containerNum": "1",
+           "name": "'${SERVICE_PRE}'-server",
+           "cluster_id": "'$SRY_CLUSTERID'",
+           "cpus": 0.5,
+           "mem": 512,
+           "instances": 1,
+           "volumes": [],
+           "imageName": "'$ZBX_SERVER_IMAGE_URI'",
+           "imageVersion": "'$ZBX_SERVER_IMAGE_VERSION'",
+           "forceImage": false,
+           "constraints": [],
+           "network": "HOST",
            "envs": [
             {
                 "key": "CONFIG_SERVER",
@@ -24,8 +30,6 @@ curl -X POST $BASE_URL/api/v1/applications/deploy \
                 "value": "true"
             }
         	],
-           "imageURI": "'$ZBX_SERVER_IMAGE_URI'",
-           "imageversion": "'$ZBX_SERVER_IMAGE_VERSION'",
-           "constraints": [["ip", "LIKE", "'$ZBX_SERVER_IP'" ], ["ip", "UNIQUE"]],
-           "network": "HOST"
+          "portMappings":[],
+          "logPaths": []
         }'
