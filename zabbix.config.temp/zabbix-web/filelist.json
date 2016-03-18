@@ -1,3 +1,7 @@
 {
+    "http://--CONFIGSERVER_IP--:--CONFIGSERVER_PORT--/config/zabbix/zabbix-web/php.ini": "/etc/php.ini",
+    "http://--CONFIGSERVER_IP--:--CONFIGSERVER_PORT--/config/zabbix/zabbix-web/php-fpm.conf": "/etc/php-fpm.conf",
+    "http://--CONFIGSERVER_IP--:--CONFIGSERVER_PORT--/config/zabbix/zabbix-web/php-fpm.d/www.conf": "/etc/php-fpm.d/www.conf",
+    "http://--CONFIGSERVER_IP--:--CONFIGSERVER_PORT--/config/zabbix/zabbix-web/zabbix.conf.php": "/etc/zabbix/web/zabbix.conf.php",
     "http://--CONFIGSERVER_IP--:--CONFIGSERVER_PORT--/config/zabbix/zabbix-web/conf.d/zabbix.conf": "/etc/nginx/conf.d/zabbix.conf"
 }
