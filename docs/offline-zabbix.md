@@ -16,8 +16,8 @@
 	
 关键服务 | 最低主机配置 | 建议主机配置 | 宿主机docker存储要求
 -----------|-----------|-----------|-----------
-zabbix-web+zabbix-server | 2核 4G内存 | 4核8G内存及以上 | overlay / devicemapper
-zabbix-mysql | 2核 4G内存 | 4核8G内存及以上| overlay / devicemapper
+zabbix-web+zabbix-server | 2核 4G内存 | 4核8G内存及以上 | 无
+zabbix-mysql | 2核 4G内存 | 4核8G内存及以上| 无
 	
 ## 1. 配置config.cfg
 
