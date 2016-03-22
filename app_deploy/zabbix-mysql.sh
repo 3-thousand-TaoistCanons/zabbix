@@ -20,7 +20,7 @@ curl -X POST $BASE_URL/api/v3/clusters/$SRY_CLUSTERID/apps \
            "imageName": "'$MYSQL_IMAGE_URI'",
            "imageVersion": "'$MYSQL_IMAGE_VERSION'",
            "forceImage": false,
-           "constraints": [],
+           "constraints": [["ip", "LIKE", "'$ZBX_MYSQL_IP'" ], ["ip", "UNIQUE"]],
            "network": "HOST",
            "envs": [
             {

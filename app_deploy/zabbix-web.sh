@@ -31,6 +31,6 @@ curl -X POST $BASE_URL/api/v3/clusters/$SRY_CLUSTERID/apps \
                 "value": "true"
             }
         	],
-          "portMappings":[],
+          "constraints": [["ip", "LIKE", "'$ZBX_WEB_IP'" ], ["ip", "UNIQUE"]],
           "logPaths": []
         }'

@@ -14,7 +14,7 @@ curl -X POST $BASE_URL/api/v3/clusters/$SRY_CLUSTERID/apps \
            "imageName": "'$ZBX_SERVER_IMAGE_URI'",
            "imageVersion": "'$ZBX_SERVER_IMAGE_VERSION'",
            "forceImage": false,
-           "constraints": [],
+           "constraints": [["ip", "LIKE", "'$ZBX_SERVER_IP'" ], ["ip", "UNIQUE"]],
            "network": "HOST",
            "envs": [
             {
