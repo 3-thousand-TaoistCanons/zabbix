@@ -8,7 +8,7 @@ curl -X POST $BASE_URL/api/v3/clusters/$SRY_CLUSTERID/apps \
            "name": "'${SERVICE_PRE}'-mysql",
            "clusterId": "'$SRY_CLUSTERID'",
            "cpus": 1,
-           "mem": 1024,
+           "mem": 2048,
            "containerPortsInfo": [],
            "instances": 1,
            "volumes": [
