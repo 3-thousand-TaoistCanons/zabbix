@@ -49,6 +49,8 @@ get_distribution_type()
 
 update_config(){
         rm -rf /etc/zabbix
+        mkdir -p /var/run/zabbix
+        chown zabbix:zabbix /var/run/zabbix
         curl -o - http://$ADDR/config/zabbix/zabbix-agent/zabbix_config.tar.gz | tar -zxf - -C /etc/
 }
 
