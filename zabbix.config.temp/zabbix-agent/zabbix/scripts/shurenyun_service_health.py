@@ -21,7 +21,7 @@ logger.addHandler(_NullHandler())
 logging.basicConfig(level=logging.WARNING, format='%(asctime)s %(levelname)s: %(message)s')
 
 host_name = socket.gethostname()
-projects=["app", "cluster", "auth", "websocket", "streaming", "metrics", "log"]
+projects=["app", "cluster", "auth", "websocket", "streaming", "metrics", "log", "alert", "harbor", "billing"]
 agent_conf="/etc/zabbix/zabbix_agentd.conf"
 
 def _get_project_oridata(base_url):
