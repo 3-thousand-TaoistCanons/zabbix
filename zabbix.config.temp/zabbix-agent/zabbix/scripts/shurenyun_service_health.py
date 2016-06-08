@@ -78,7 +78,7 @@ def service_status_send(base_url):
                 for key,val in project.items():
                     try:
                         for k,v in val.items():
-                                zkey="shurenyun.service.%s[%s]"%(k,key)
+                                zkey="shurenyun.service.%s[%s]"%(k.lower(),key)
                                 zval=v
                                 logger.debug("SENDER_DATA: - %s %s" % ( zkey, zval))
                                 rdatafile.write("- %s %s\n" % (zkey, zval))
