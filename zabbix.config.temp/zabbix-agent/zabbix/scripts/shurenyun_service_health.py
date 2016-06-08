@@ -76,11 +76,16 @@ def service_status_send(base_url):
 	rdatafile = tempfile.NamedTemporaryFile(delete=False)
 	for project in _get_project_oridata(base_url):
                 for key,val in project.items():
-			for k,v in val.items():
-				zkey="shurenyun.service.%s[%s]"%(k,key)
-				zval=v
-	    			logger.debug("SENDER_DATA: - %s %s" % ( zkey, zval))
-    				rdatafile.write("- %s %s\n" % (zkey, zval))
+                    try:
+                        for k,v in val.items():
+                                zkey="shurenyun.service.%s[%s]"%(k,key)
+                                zval=v
+                                logger.debug("SENDER_DATA: - %s %s" % ( zkey, zval))
+                                rdatafile.write("- %s %s\n" % (zkey, zval))
+
+                    except:
+                        logger.error(traceback.print_exc())
+                        #pass
 	rdatafile.close()
 	returncode = _send_data(rdatafile)
 	os.unlink(rdatafile.name)
