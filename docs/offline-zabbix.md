@@ -45,7 +45,7 @@ ZBX_MYSQL_CHECK_PASS="zabbixpass"       ## Need to check
 ZBX_MYSQL_USER="zabbix"                 
 ZBX_MYSQL_PASS="zabbixpass"          ## Need to check
 ZBX_MYSQL_DATABASE="zabbix"          
-
+```
 
 ## 2. 安装zabbix server
 
@@ -75,9 +75,9 @@ shurenyun-offline 模板中默认的web监控地址为 offlinewww.shurenyun.com/
 
 如图：
 
-![](images/web_temp.png)
-![](images/web_temp_name.png)
-![](images/web_temp_val.png)
+![alt text](images/web_temp.png)
+![alt text](images/web_temp_name.png)
+![alt text](images/web_temp_val.png)
 
 
 ## 5. 在zabbix server 添加数人云主机监控，如果有多台主机，重复下面动作
