@@ -45,7 +45,7 @@ ZBX_MYSQL_CHECK_PASS="zabbixpass"       ## Need to check
 ZBX_MYSQL_USER="zabbix"                 
 ZBX_MYSQL_PASS="zabbixpass"          ## Need to check
 ZBX_MYSQL_DATABASE="zabbix"          
-```
+
 
 ## 2. 安装zabbix server
 
@@ -61,10 +61,20 @@ default pass: zabbix
 
 ## 3. 安装zabbix agent
 
+#### 3.1 安装agent
+
 安装完成后，会显示zabbix server 的访问地址及安装 zabbix-agent 的脚本链接,在需要监控的主机执行上面命令, 例如：
 
 ```
 curl -Ls http://10.3.10.47:80/config/zabbix/zabbix-agent/install.sh|bash
+```
+
+#### 3.2 agent监控mysql 
+
+如果主机需要监控mysql，需要在mysql中添加 agent脚本的用户权限(ZBX_MYSQL_CHECK_USER,ZBX_MYSQL_CHECK_PASSWORD 在同安装文件中config.cfg变量值)
+
+```
+GRANT SELECT,SHOW VIEW,SUPER,Replication client,replication slave ON *.* TO '"$ZBX_MYSQL_CHECK_USER"'@'%' identified by '"$ZBX_MYSQL_CHECK_PASSWORD"';FLUSH PRIVILEGES ;
 ```
 
 ## 4. 修改线下监控数人云web模板
@@ -75,20 +85,20 @@ shurenyun-offline 模板中默认的web监控地址为 offlinewww.shurenyun.com/
 
 如图：
 
-![alt text](images/web_temp.png)
-![alt text](images/web_temp_name.png)
-![alt text](images/web_temp_val.png)
+![](images/web_temp.png)
+![](images/web_temp_name.png)
+![](images/web_temp_val.png)
 
 
 ## 5. 在zabbix server 添加数人云主机监控，如果有多台主机，重复下面动作
 
-#### 5.2 点开添加Host页面
+#### 5.1 点开添加Host页面
 ![alt text](images/pre_create_host.png "pre_create_host")
 
-#### 5.3 配置Host页面
+#### 5.2 配置Host页面
 ![alt text](images/create_host_host.png "create_host_host")
 
-#### 5.4 配置Host关联的Template
+#### 5.3 配置Host关联的Template
 
 数人云主机关联的模板列表(模板列表根据主机的服务模块酌情修改)
 
@@ -104,10 +114,10 @@ Template shurenyun-offline discovery
 
 ![alt text](./images/create_host_temp.png "create_host_temp")
 
-#### 5.5 Host 列表
+#### 5.4 Host 列表
 ![alt text](images/host_list.png "host_list")
 
-#### 5.6 添加zabbix server host
+#### 5.5 添加zabbix server host
 
 添加流程参考前面4项，
 
