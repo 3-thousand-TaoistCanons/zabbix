@@ -67,9 +67,7 @@ default pass: zabbix
 curl -Ls http://10.3.10.47:80/config/zabbix/zabbix-agent/install.sh|bash
 ```
 
-## 4. 在zabbix server 添加数人云主机监控，如果有两台主机，重复下面动作
-
-#### 4.1 修改线下监控数人云web模板 
+## 4. 修改线下监控数人云web模板
 
 shurenyun-offline 模板中默认的web监控地址为 offlinewww.shurenyun.com/offlinedashboard.shurenyun.com/offlineforward.shurenyun.com
 
@@ -77,18 +75,20 @@ shurenyun-offline 模板中默认的web监控地址为 offlinewww.shurenyun.com/
 
 如图：
 
-![alt text](images/web_temp.png "web_temp")
-![alt text](images/web_temp_name.png "web_temp_name")
-![alt text](images/web_temp_val.png "web_temp_val")
+![](images/web_temp.png)
+![](images/web_temp_name.png)
+![](images/web_temp_val.png)
 
 
-#### 4.2 点开添加Host页面
+## 5. 在zabbix server 添加数人云主机监控，如果有多台主机，重复下面动作
+
+#### 5.2 点开添加Host页面
 ![alt text](images/pre_create_host.png "pre_create_host")
 
-#### 4.3 配置Host页面
+#### 5.3 配置Host页面
 ![alt text](images/create_host_host.png "create_host_host")
 
-#### 4.4 配置Host关联的Template
+#### 5.4 配置Host关联的Template
 
 数人云主机关联的模板列表(模板列表根据主机的服务模块酌情修改)
 
@@ -104,10 +104,10 @@ Template shurenyun-offline discovery
 
 ![alt text](./images/create_host_temp.png "create_host_temp")
 
-#### 4.5 Host 列表
+#### 5.5 Host 列表
 ![alt text](images/host_list.png "host_list")
 
-#### 4.6 添加zabbix server host
+#### 5.6 添加zabbix server host
 
 添加流程参考前面4项，
 
