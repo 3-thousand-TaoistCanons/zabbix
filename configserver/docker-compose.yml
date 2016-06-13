@@ -1,9 +1,6 @@
 configserver:
   image: index.shurenyun.com/centos7/nginx-1.8.0:20160307202745
-  ports:
-    - 8081:80
-  expose:
-    - 8081
+  net: host
   volumes:
     - ./conf.d:/etc/nginx/conf.d
     - ./config:/data/config

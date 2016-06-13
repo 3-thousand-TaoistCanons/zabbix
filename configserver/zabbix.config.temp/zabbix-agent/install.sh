@@ -75,7 +75,7 @@ do_install()
      fi
      echo "-> Installing zabbix-agent..."
      curl -Ls http://$ADDR/packages/centos/get_repo.sh|bash -s $ADDR
-     yum --disablerepo=\* --enablerepo=offlineshurenyunrepo install -y zabbix-agent zabbix-sender jq sysstat nc net-tools mysql
+     yum --disablerepo=\* --enablerepo=offlineshurenyunrepo install -y zabbix-agent zabbix-sender jq sysstat nc net-tools mysql python-requests
     )
     ;;
     ubuntu)

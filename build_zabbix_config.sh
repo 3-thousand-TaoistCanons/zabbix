@@ -45,7 +45,7 @@ preconfigserver_conf(){
     rm -rf zabbix_tmp
     cp -fR zabbix.config.temp zabbix_tmp
     
-    files=`grep -rl '' docker-compose.yml zabbix_tmp/*`
+    files=`grep -rl '' docker-compose.yml zabbix_tmp/* conf.d/*`
     replace_var $files
     
     sed -i 's/Server=127.0.0.1/Server='$ZBX_SERVER_IP'/g' zabbix_tmp/zabbix-agent/zabbix/zabbix_agentd.conf
