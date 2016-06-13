@@ -1,0 +1,15 @@
+zabbix-server:
+  image: --ZBX_SERVER_IMAGE_URI--:--ZBX_SERVER_IMAGE_VERSION--
+  net: host
+  environment:
+    - CONFIG_SERVER=http://--CONFIGSERVER_IP--:--CONFIGSERVER_PORT--
+    - SERVICE=zabbix/zabbix-server
+    - NOHOSTNAME=true
+
+zabbix-web:
+  image: --ZBX_WEB_IMAGE_URI--:--ZBX_WEB_IMAGE_VERSION--
+  net: host
+  environment:
+    - CONFIG_SERVER=http://--CONFIGSERVER_IP--:--CONFIGSERVER_PORT--
+    - SERVICE=zabbix/zabbix-web
+    - NOHOSTNAME=true

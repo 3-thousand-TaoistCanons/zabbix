@@ -1,7 +1,7 @@
 #!/bin/bash
 # install zabbix of shurenyun
 # Author : jyliu
-# Date: 2016-03-11
+# Date: 2016-06-12
 export BASE_DIR=$(cd `dirname $0` && pwd)
 cd $BASE_DIR
 
@@ -11,16 +11,16 @@ cd $BASE_DIR
 check_http(){
   service=$1
   url=$2
-  code=$3
+  _code=$3
 
-  if [ -z "$code" ];then
-	code=200
+  if [ -z "$_code" ];then
+	_code=200
   fi
 
   for i in  `seq 1 61`
   do
     check_code=$(curl --connect-timeout 10 -sL -w "%{http_code}\\n" "$url" -o /dev/null)
-    if [ "$check_code" = "$code" ]; then
+    if [ "$check_code" = "$_code" ]; then
 	echo "Simple test $service success."
 	break
     elif [ "$i" -gt "60" ];then
@@ -49,53 +49,30 @@ check_mysql_health (){
   done
 }
 
-check_sendmail(){
-  for i in  `seq 1 61`
-  do
-	result=`curl http://$SENDMAIL_IP:$MAIL_PORT/sendmail/ --data "key=$MAIL_ORIGIN_KEY&mailto=$TEST_MAIL&sub=sendmail&content=sendmail" 2>/dev/null`
-	if [ "$result" = "ok" ];then
-        	echo "sendmail test success"
-		break
-	elif [ "$i" -gt "60" ];then
-        	echo "sendmail test error!!!"
-	fi
-	echo "check sendmail $i"
-	sleep 1
-  done
-}
-
-cd app_deploy
-
-echo "deploy configserver"
-./configserver.sh
+sh configserver/run_configserver.sh
 check_http configserver "http://$CONFIGSERVER_IP:$CONFIGSERVER_PORT/config/zabbix/zabbix-agent/install.sh"
 
-if [ "$ISDEPLOY_SENDMAIL" = "true" ];then
-	echo "deploy sendmail"
-	./sendmail.sh
-	check_sendmail
-fi
+sh mysql/run_mysql.sh
 
 echo "install zabbix agent"
-$BASE_DIR/config/zabbix/zabbix-agent/install.sh
+$BASE_DIR/configserver/config/zabbix/zabbix-agent/install.sh
 
-echo 
-echo "deploy zabbix-mysql"
-./zabbix-mysql.sh
 check_mysql_health
 
 echo 
 echo "init zabbix db"
 if [ "$ISINIT_MYSQL" = "true" ];then
-  ./init_zabbix_db.sh && echo "init zabbix db ok" || (echo "init zabbix db error !!!" && exit 1)
+  cd zabbix
+  ./init_zabbix_db.sh && echo "init zabbix db ok"
+  if [ $? -ne 0 ] ;then
+	echo "init zabbix db error !!!" && exit 1
+  fi
+  cd ..
 fi
 
-echo 
-echo "deplop zabbix-server"
-./zabbix-server.sh
-./zabbix-web.sh
-
+sh zabbix/run_zabbix.sh
 check_http zabbix-server "http://$ZBX_SERVER_IP:9280/"
+
 
 
 echo
@@ -104,4 +81,4 @@ echo "default user: admin"
 echo "default pass: zabbix"
 echo
 echo "Add the zabbix agent for the need to monitor the host"
-grep 'Usega:' $BASE_DIR/config/zabbix/zabbix-agent/install.sh
+grep 'Usega:' $BASE_DIR/configserver/config/zabbix/zabbix-agent/install.sh

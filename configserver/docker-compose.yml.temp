@@ -1,0 +1,10 @@
+configserver:
+  image: --NGINX_IMAGE_URI--:--NGINX_IMAGE_VERSION--
+  ports:
+    - --CONFIGSERVER_PORT--:80
+  expose:
+    - --CONFIGSERVER_PORT--
+  volumes:
+    - ./conf.d:/etc/nginx/conf.d
+    - ./config:/data/config
+    - ./packages:/data/packages

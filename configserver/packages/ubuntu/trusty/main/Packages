@@ -1,0 +1,567 @@
+Package: libdbi-perl
+Priority: optional
+Section: perl
+Installed-Size: 2155
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Version: 1.630-1
+Provides: perl-dbdabi-94
+Depends: perl (>= 5.18.1-4build1), perlapi-5.18.1, libc6 (>= 2.4)
+Suggests: libclone-perl (>= 0.34), libmldbm-perl, libnet-daemon-perl, libplrpc-perl, libsql-statement-perl (>= 1.402)
+Breaks: libdbd-anydata-perl (<< 0.11+), libdbd-csv-perl (<< 0.3600+), libsql-statement-perl (<< 1.33+)
+Filename: debs/libdbi-perl_1.630-1_amd64.deb
+Size: 883778
+MD5sum: 3ac7a3783657527cf6039dc3db8e7b79
+SHA1: 885dfde332d5cc75f7b4b904b91f584293986c07
+SHA256: f96697a7b7af948b70ea985d2e6294d02ead5cf7144bca5341b750a5821f7878
+SHA512: 39264c74069d85d38282cb2660432ea2e43aaf4db1a75b7a8a1c5808efb49d59512f6bc6991cf298c7524ae70eb59bb3cc8efd0080223f8e3888d1dd82ea4e77
+Description: Perl Database Interface (DBI)
+ DBI (DataBase Interface) is a Perl framework that provides a common interface
+ to access various backend databases in a uniform manner. DBD (DataBase Driver)
+ modules provide implementations for various backend data storage mechanisms
+ including networked relational databases (particularly SQL databases) and even
+ web services such as the Google search engine.
+ .
+ It is extremely portable and available for a wide range of operating systems,
+ architectures and data stores, including:
+ .
+  * Oracle
+  * Microsoft SQL Server
+  * IBM DB2
+  * SQLite
+  * PostgreSQL
+  * Firebird
+  * MySQL
+Homepage: http://dbi.perl.org/
+
+Package: mysql-common
+Priority: optional
+Section: database
+Installed-Size: 145
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: all
+Source: mysql-5.5
+Version: 5.5.47-0ubuntu0.14.04.1
+Breaks: amarok (<< 2.5.0-2), mysql-client-5.1 (<< 5.5), mysql-server-5.1 (<< 5.5), mysql-server-core-5.1 (<< 5.5)
+Filename: debs/mysql-common_5.5.47-0ubuntu0.14.04.1_all.deb
+Size: 14416
+MD5sum: 01b260a4f3c509b15d8f8c49489141c3
+SHA1: acf835d4177c49183791502332f30bd0364536f0
+SHA256: 89ed67ff12cbc7a5b40ba1e84943b068aa074239c554db5fae19fcecc27a4522
+SHA512: b8c4f69557bbf9a7f3749a40747a47c82a5583c0aec76be5a9239c48a855dc999cb5619f5d7ac5f0e7ab08bfbc69fae01cd40ddc93cb8ae74b6a03cdb4a378a2
+Description: MySQL database common files, e.g. /etc/mysql/my.cnf
+ MySQL is a fast, stable and true multi-user, multi-threaded SQL database
+ server. SQL (Structured Query Language) is the most popular database query
+ language in the world. The main goals of MySQL are speed, robustness and
+ ease of use.
+ .
+ This package includes files needed by all versions of the client library,
+ e.g. /etc/mysql/my.cnf.
+Multi-Arch: foreign
+Homepage: http://dev.mysql.com/
+
+Package: libsensors4
+Priority: optional
+Section: libs
+Installed-Size: 142
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Aurelien Jarno <aurel32@debian.org>
+Architecture: amd64
+Source: lm-sensors
+Version: 1:3.3.4-2ubuntu1
+Depends: libc6 (>= 2.14)
+Pre-Depends: multiarch-support
+Suggests: lm-sensors
+Filename: debs/libsensors4_13a3.3.4-2ubuntu1_amd64.deb
+Size: 28182
+MD5sum: 336ecd89d558b88deb9c293a46f71176
+SHA1: e8b00faf5b9f6399fb7a65ac1142a9e247bfb3b0
+SHA256: a4c3ec107f0b67c8874ebf7b3f4cdf1203f4f7df471bffd9b052afbfea8c4494
+SHA512: 48fa1d7bf7b6d2d0e91f3174c7277be31bee4f4b9610493b567411e4d9f9d8b6598c5ecbe139966f7d8f3baeb1b23c5f6e0b7f01556519a1e794588c25d043f5
+Description: library to read temperature/voltage/fan sensors
+ Lm-sensors is a hardware health monitoring package for Linux. It allows you
+ to access information from temperature, voltage, and fan speed sensors. It
+ works with most newer systems.
+ .
+ This package contains a shared library for querying lm-sensors.
+Multi-Arch: same
+Homepage: http://www.lm-sensors.org
+
+Package: libplrpc-perl
+Priority: optional
+Section: perl
+Installed-Size: 152
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
+Architecture: all
+Version: 0.2020-2
+Depends: perl (>= 5.6.0-16), libstorable-perl | perl-modules (>= 5.8.0-10), libnet-daemon-perl
+Suggests: libcompress-zlib-perl
+Filename: debs/libplrpc-perl_0.2020-2_all.deb
+Size: 40256
+MD5sum: b4685c6c88fc577fc355cacf08525688
+SHA1: bf2aed77d11104d7c94a44ea6cf416776a696f83
+SHA256: 591e7e33f8dd2b937109c44f860323db080c84ce94021ebced444be0646851e0
+SHA512: 36f50381f7fc1536643b9f32bd1172d1a0b527baa886ca0f672426d96719c9549869a561c458956a896a05dffdbda6b9decd3bc31b4750c75f8c2ea0a002fb26
+Description: Perl extensions for writing PlRPC servers and clients
+ Perl RPC simplifies the writing of Perl based client/server
+ applications.  RPC::PlServer is the package used on the server side,
+ and you guess what RPC::PlClient is for.  plRPC works by defining a set
+ of functions that may be executed by the client.
+Homepage: http://search.cpan.org/search?query=PlRPC&mode=module
+
+Package: libnet-daemon-perl
+Priority: extra
+Section: perl
+Installed-Size: 148
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
+Architecture: all
+Version: 0.48-1
+Depends: perl
+Filename: debs/libnet-daemon-perl_0.48-1_all.deb
+Size: 43988
+MD5sum: c27347f68ff5f2c25ffbc9415dbac502
+SHA1: 16d82667d7dbe35f4f95639ef7227385c38f5788
+SHA256: cb623c99df419c1ece40cea2caa902b575cf935cab1b592a705902e5f6921c7b
+SHA512: e88814d8aaf4f5515411435a82b4c336e94f7e4fd56968f05f8317209118bdd8fb89def0509907c950186acd4f78cf13cff2190c9cf26120b37b8a7eb70ed0ec
+Description: Perl module for building portable Perl daemons easily
+ Net::Daemon is an abstract base class for implementing portable
+ server applications in a very simple way. The module is designed
+ for Perl 5.005 and threads, but can work with fork() and Perl 5.004.
+Homepage: http://search.cpan.org/dist/Net-Daemon/
+
+Package: zabbix-agent
+Priority: optional
+Section: net
+Installed-Size: 815
+Maintainer: Kodai Terashima <kodai.terashima@zabbix.com>
+Architecture: amd64
+Source: zabbix
+Version: 1:2.4.7-1+trusty
+Depends: libc6 (>= 2.17), libcurl3 (>= 7.16.2), libldap-2.4-2 (>= 2.4.7), debconf (>= 0.5) | debconf-2.0, adduser, ucf, lsb-base
+Suggests: logrotate
+Filename: debs/zabbix-agent_2.4.7-1+trusty_amd64.deb
+Size: 329808
+MD5sum: 445e1306108871a37191231f2b0ff041
+SHA1: dbf9e505d79c521c26c97ed9eb04bf4dadaf8583
+SHA256: 8b7097c856f48f3aa0a871c26eb1e4b81d53220a9c261b40cb020a66340ab26f
+SHA512: 2b11cff5ebd4799987eb3016462d41b463ec6eddcaa0b1df68e018b61b8bba3153a3054b18e4b934940861b5ee336a4882a7c884cb65504fc558216b61f9946a
+Description: network monitoring solution - agent
+ Zabbix is a server/client network monitoring system with many features.
+ It can be used for:
+ .
+  - high level monitoring of IT services;
+  - centralized monitoring of your servers and applications;
+  - monitoring of SNMP-enabled devices;
+  - performance monitoring (process load, network activity, disk
+    activity, memory usage, OS parameters etc.);
+  - data visualization.
+ .
+ This package provides the software needed to monitor a host using a
+ Zabbix agent.
+Origin: Zabbix
+
+Package: net-tools
+Priority: important
+Section: net
+Installed-Size: 708
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: net-tools Team <pkg-net-tools-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Version: 1.60-25ubuntu2.1
+Replaces: ja-trans (<= 0.8-2), netbase (<< 4.00)
+Depends: libc6 (>= 2.14)
+Conflicts: ja-trans (<= 0.8-2)
+Filename: debs/net-tools_1.60-25ubuntu2.1_amd64.deb
+Size: 176042
+MD5sum: a45532f0801113459aff5b8a65a70240
+SHA1: e67617c5a8cc00ff23498f659a0a86f22927e23d
+SHA256: bbca6a003ebd9dd54a0d66ca35cdf378e6f4a8c8ac554f4c06860de0dde1bdab
+SHA512: c609cc34e7b1efe4c1ac3f2d465053f2a4fb3dc75110765da0ebdcc6ee05f7f694b839379c3356b70fc0b6317df19c1d453a41a9dab48b154545f06c1293b988
+Description: The NET-3 networking toolkit
+ This package includes the important tools for controlling the network
+ subsystem of the Linux kernel.  This includes arp, ifconfig, netstat,
+ rarp, nameif and route.  Additionally, this package contains utilities
+ relating to particular network hardware types (plipconfig, slattach,
+ mii-tool) and advanced aspects of IP configuration (iptunnel, ipmaddr).
+ .
+ In the upstream package 'hostname' and friends are included. Those are
+ not installed by this package, since there is a special "hostname*.deb".
+Multi-Arch: foreign
+Homepage: http://net-tools.berlios.de/
+
+Package: zabbix-sender
+Priority: optional
+Section: net
+Installed-Size: 322
+Maintainer: Kodai Terashima <kodai.terashima@zabbix.com>
+Architecture: amd64
+Source: zabbix
+Version: 1:2.4.7-1+trusty
+Depends: libc6 (>= 2.17)
+Filename: debs/zabbix-sender_2.4.7-1+trusty_amd64.deb
+Size: 226584
+MD5sum: f37b22e24be246da92508dcbc2701c05
+SHA1: 3de5498f6d121e2d87a20be391b6c410f908d7ec
+SHA256: 18d15d2a408e8572b39af320d1fbee0d2537caf1fbc927c587dc7574bab26b05
+SHA512: 9211912941138ba057c344e04a7a372aeeb360e4fe0093f85705c37e0cbfbe00ffb9cebc2e974e83ecafe4814eab60eb48c61bc724880bddc522def060cd45f5
+Description: network monitoring solution - sender
+ Zabbix is a server/client network monitoring system with many features.
+ It can be used for:
+ .
+  - high level monitoring of IT services;
+  - centralized monitoring of your servers and applications;
+  - monitoring of SNMP-enabled devices;
+  - performance monitoring (process load, network activity, disk
+    activity, memory usage, OS parameters etc.);
+  - data visualization.
+ .
+ This package provides the command line utility needed to send data to
+ Zabbix server or Zabix proxy.
+Origin: Zabbix
+
+Package: libmysqlclient18
+Priority: optional
+Section: libs
+Installed-Size: 3414
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: amd64
+Source: mysql-5.5
+Version: 5.5.47-0ubuntu0.14.04.1
+Depends: mysql-common (>= 5.5.47-0ubuntu0.14.04.1), libc6 (>= 2.14), zlib1g (>= 1:1.1.4)
+Pre-Depends: multiarch-support
+Filename: debs/libmysqlclient18_5.5.47-0ubuntu0.14.04.1_amd64.deb
+Size: 597458
+MD5sum: ccd92050b4933013aea86b0d6d05e7ed
+SHA1: 6a958b5dedd9614745272fa283d6340a11521b4b
+SHA256: 0b067fec935125b4a1ca9549b1d53cc5e5e29a38683a9d2581960ff387b9e660
+SHA512: 65cff65af01666abf0edcab553cf8a7de4201ebaa5836ff3d7a6759ddc79e981f1efa679295620c50df61d2ca96ee08f635d5e5169e0ef42986a4b167e80e265
+Description: MySQL database client library
+ MySQL is a fast, stable and true multi-user, multi-threaded SQL database
+ server. SQL (Structured Query Language) is the most popular database query
+ language in the world. The main goals of MySQL are speed, robustness and
+ ease of use.
+ .
+ This package includes the client library.
+Multi-Arch: same
+Homepage: http://dev.mysql.com/
+
+Package: zabbix-release
+Priority: extra
+Section: net
+Installed-Size: 43
+Maintainer: Kodai Terashima <kodai.terashima@zabbix.com>
+Architecture: all
+Version: 2.4-1+trusty
+Filename: debs/zabbix-release_2.4-1+trusty_all.deb
+Size: 3604
+MD5sum: 71907571d3f9b71d0b88697448cdfd5e
+SHA1: 7582721cc9e150690e4234b880517449b367d63e
+SHA256: a65d87fb85e609602768d18e66cae0df4e69280d11c3de43b88748b767ee5e1c
+SHA512: 601e9ce62d15b2798a6a8cd12bc8d2ef202675054ff11f9c34598f235501cefe2bfff5ff735325a1220a234aabe1af756347a44a01220f5c320b2921bc67f7e4
+Description: Zabbix official repository configuration
+ This package provide Zabbix official repository configuration files.
+Homepage: http://www.zabbix.com
+
+Package: libterm-readkey-perl
+Priority: optional
+Section: perl
+Installed-Size: 117
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Version: 2.31-1
+Depends: perl (>= 5.18.1-4), perlapi-5.18.1, libc6 (>= 2.15)
+Filename: debs/libterm-readkey-perl_2.31-1_amd64.deb
+Size: 31640
+MD5sum: 341fd129784d7fa6bd0bca0e7c82b37d
+SHA1: 231e591404f9acfb27f7e2657213cce74cbb19af
+SHA256: aa840fe6b3544f2ced4dbd9d082358819142bc31247a2dc7672d8ec398f587ea
+SHA512: 532382fafb08478ec8bf02390401b38e8e9d4c38477db714703d326e3bd572b933bff43b615400e5c876431a986ad89370a99e4e4ef804ec5e1c1c972fd3f8d8
+Description: perl module for simple terminal control
+ Term::ReadKey is a compiled perl module dedicated to providing simple
+ control over terminal driver modes (cbreak, raw, cooked, etc.,) support for
+ non-blocking reads, if the architecture allows, and some generalized handy
+ functions for working with terminals. One of the main goals is to have the
+ functions as portable as possible, so you can just plug in "use
+ Term::ReadKey" on any architecture and have a good likelyhood of it working.
+Homepage: https://metacpan.org/release/TermReadKey/
+
+Package: libdbd-mysql-perl
+Priority: optional
+Section: perl
+Installed-Size: 307
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Version: 4.025-1
+Depends: perl (>= 5.18.1-4build1), perl-dbdabi-94, perlapi-5.18.1, libc6 (>= 2.4), libmysqlclient18 (>= 5.5.13-1), libdbi-perl
+Filename: debs/libdbd-mysql-perl_4.025-1_amd64.deb
+Size: 103580
+MD5sum: a98e4e238c4ec1a98ddbd9bedb5f97b2
+SHA1: ad14a4f227f6e3c8480ff284df981b465da1a7d8
+SHA256: 885e83f848237b5193d1705758ce8c20af0d533b003f8a6bbb3f7e8d602a945c
+SHA512: c58dc378e5550a78f446cdb28ccede10dbe5b80b5362fa312e448ae5a0b0e833c9c9d5e51f979ce1a3943e11c76f96a928dc909fe48c6091ee443367b459ef3c
+Description: Perl5 database interface to the MySQL database
+ DBD::mysql is the Perl5 Database Interface driver for the MySQL
+ database. In other words: DBD::mysql is an interface between the Perl
+ programming language and the MySQL programming API that comes with the
+ MySQL relational database management system. Most functions provided by
+ this programming API are supported. Some rarely used functions are
+ missing, mainly because noone ever requested them. However supported
+ features include: compression of data between server and client; timeouts;
+ SSL; prepared statement support; server administration such as creating
+ and dropping databases and restarting the server; auto-reconnection;
+ utf8; bind type guessing; bind comment placeholders; automated insert ids;
+ transactions; multiple result sets and multithreading.
+Homepage: https://metacpan.org/release/DBD-mysql
+
+Package: netcat
+Priority: extra
+Section: net
+Installed-Size: 30
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Ruben Molina <rmolina@udea.edu.co>
+Architecture: all
+Version: 1.10-40
+Depends: netcat-traditional (>= 1.10-39)
+Filename: debs/netcat_1.10-40_all.deb
+Size: 11790
+MD5sum: cac91c709dbe9693a4bfce879b6f7f4b
+SHA1: 5f863351128b62b65f46a8d3e779dcea57912c85
+SHA256: b18418801a2f12d153e7ff10ba0b96658fc98abf4edf8f49f42f7c4ecf1f57c6
+SHA512: 49875d07672b4282124388960b40d46623e82320c60d983e8952675656b7ca495cc97c4af2b1a35f61856917fa68e4a09d0ca1c555058b9fd5c06ac0d30ab5fa
+Description: TCP/IP swiss army knife -- transitional package
+ This is a "dummy" package that depends on lenny's default version of
+ netcat, to ease upgrades. It may be safely removed.
+
+Package: mysql-client-core-5.5
+Priority: optional
+Section: database
+Installed-Size: 6819
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: amd64
+Source: mysql-5.5
+Version: 5.5.47-0ubuntu0.14.04.1
+Replaces: mysql-client (<< 5.5.47-0ubuntu0.14.04.1), mysql-client-5.0, mysql-client-core-5.1
+Depends: libc6 (>= 2.14), libreadline6 (>= 6.0), zlib1g (>= 1:1.1.4)
+Breaks: mysql-client (<< 5.5.47-0ubuntu0.14.04.1), mysql-client-5.0, mysql-client-core-5.1
+Filename: debs/mysql-client-core-5.5_5.5.47-0ubuntu0.14.04.1_amd64.deb
+Size: 704400
+MD5sum: 3b26385ef92ef557eafb349f8ef2375e
+SHA1: d6126d539be9b634d825428b50d518b4652f4029
+SHA256: 51665a4ae908cd586223a6639f59217b3894ffce2fec2922ca88c617a96ad11a
+SHA512: 688c34ca6883edd1b7964ea5b9c2e21aec7b916e39ed9d47ba9c63fdaf08ada2fcc6b50a328d1b7dd1859a900c3b8bb3fa4287afc91dc3d1caaa913a8aec83d2
+Description: MySQL database core client binaries
+ MySQL is a fast, stable and true multi-user, multi-threaded SQL database
+ server. SQL (Structured Query Language) is the most popular database query
+ language in the world. The main goals of MySQL are speed, robustness and
+ ease of use.
+ .
+ This package includes the core client files, as used by Akonadi.
+Homepage: http://dev.mysql.com/
+
+Package: libsql-statement-perl
+Priority: optional
+Section: perl
+Installed-Size: 506
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Architecture: all
+Version: 1.405-1
+Depends: perl, libclone-perl, libparams-util-perl
+Recommends: libdbi-perl (>= 1.616), libtext-soundex-perl | perl (<< 5.17.0)
+Breaks: libdbd-anydata-perl (<< 0.09+), libdbd-csv-perl (<< 0.3000), libdbi-perl (<< 1.612)
+Filename: debs/libsql-statement-perl_1.405-1_all.deb
+Size: 184342
+MD5sum: 9522680c3097b7ff3542123501a48157
+SHA1: 4e76cc1e0b095f0dfbeb8cfad62eeb28637ba216
+SHA256: 3297ce90f01bd1e8c7aff86ab1b480d728978bfa29e57e7b93d6f5547b8d5964
+SHA512: b543447734d7a291c9bfc870228b72d87445ce2fe9bea13457473bd89cc30d8fd2971d4b0b6de2bfa23fd90868c1db4a3f0fd7a6611be5930da841ce696b2637
+Description: module for parsing and processing SQL statements
+ SQL::Statement is a Perl module that implements a small, abstract SQL engine.
+ This module is not useful itself, but as a base class for deriving concrete
+ SQL engines. The implementation is designed to work fine with the DBI driver
+ DBD::CSV, thus probably not so well suited for a larger environment, but I'd
+ hope it is extendable without too much problems.
+Homepage: https://metacpan.org/release/SQL-Statement/
+
+Package: netcat-traditional
+Priority: important
+Section: net
+Installed-Size: 157
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Ruben Molina <rmolina@udea.edu.co>
+Architecture: amd64
+Source: netcat
+Version: 1.10-40
+Provides: netcat
+Depends: libc6 (>= 2.15)
+Filename: debs/netcat-traditional_1.10-40_amd64.deb
+Size: 73480
+MD5sum: cc1ac2e7099e71925f647d6b5ffbd485
+SHA1: e55753d1813d50efba83608623f2da6e22932792
+SHA256: b3cc288a392351d2349f1c55410fc43dc1eb473e2ac125fc7b72c463ffbae688
+SHA512: 26e859082cba6495e506279e54a4274fa933087e2eae03bbb931830f6f7e1d7a028f23619b8c1587edc26d614516ddaf587b656c5f988d93b3bc54468f225d27
+Description: TCP/IP swiss army knife
+ A simple Unix utility which reads and writes data across network
+ connections using TCP or UDP protocol. It is designed to be a reliable
+ "back-end" tool that can be used directly or easily driven by other
+ programs and scripts. At the same time it is a feature-rich network
+ debugging and exploration tool, since it can create almost any kind
+ of connection you would need and has several interesting built-in
+ capabilities.
+ .
+ This is the "classic" netcat, written by *Hobbit*. It lacks many
+ features found in netcat-openbsd.
+
+Package: mysql-client-5.5
+Priority: optional
+Section: database
+Installed-Size: 29668
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: amd64
+Source: mysql-5.5
+Version: 5.5.47-0ubuntu0.14.04.1
+Replaces: mysql-client (<< 5.5.47-0ubuntu0.14.04.1), mysql-client-5.0, mysql-client-5.1
+Provides: mysql-client, virtual-mysql-client
+Depends: debianutils (>= 1.6), libdbd-mysql-perl (>= 1.2202), libdbi-perl, libterm-readkey-perl, mysql-client-core-5.5, mysql-common (>= 5.5.47-0ubuntu0.14.04.1), perl, libc6 (>= 2.17), zlib1g (>= 1:1.1.4)
+Breaks: mysql-client (<< 5.5.47-0ubuntu0.14.04.1), mysql-client-5.0, mysql-client-5.1
+Filename: debs/mysql-client-5.5_5.5.47-0ubuntu0.14.04.1_amd64.deb
+Size: 1579358
+MD5sum: 9ccd766b6706f2bc3912492363fa9086
+SHA1: c626d1ef09bd0fd611d551f0e1589bffe1676196
+SHA256: e408f595545dcf2dcc1871c07ff03a7af481dccc8bb01d42c58978fe81a41b8c
+SHA512: 5dd679b61d9ddbf70f421f7b18fae83521f14c29bfafbf64d67b1478ef04d4948411f66190a0e061ceb29859e00a1c0dfcc394d6a107cafc7c42bf3281aa3c1e
+Description: MySQL database client binaries
+ MySQL is a fast, stable and true multi-user, multi-threaded SQL database
+ server. SQL (Structured Query Language) is the most popular database query
+ language in the world. The main goals of MySQL are speed, robustness and
+ ease of use.
+ .
+ This package includes the client binaries and the additional tools
+ innotop and mysqlreport.
+Homepage: http://dev.mysql.com/
+
+Package: libmldbm-perl
+Priority: optional
+Section: perl
+Installed-Size: 77
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Architecture: all
+Version: 2.05-1
+Depends: perl
+Recommends: libfreezethaw-perl
+Filename: debs/libmldbm-perl_2.05-1_all.deb
+Size: 22532
+MD5sum: 2171039e79acb543018a946f3068858b
+SHA1: 43d54d73c47214137ec4f513b32fb8325837649d
+SHA256: ac1db0a922e88cc17280fa13abc3a7cbae38190747958e303cc15297a3259228
+SHA512: 38799f4859bd25e4eb71ccaf738bf96b5c4647ac054087c3854eb49e8788f854018b8b84a1519197962012436caee6650cf3f0990b49c551e9efb4009f2d77d1
+Description: module for storing multidimensional hash structures in perl tied hashes
+ The MLDBM perl module can be used to store multidimensional hash structures
+ in tied hashes (including DBM files).
+ .
+ It depends on the Data::Dumper module and by default uses the
+ SDBM tied hash. But you can use it with DB_File (and others
+ DBM modules). You can also use other serializing packages
+ like Storable and FreezeThaw.
+Homepage: https://metacpan.org/release/MLDBM/lib/MLDBM.pm
+
+Package: libclone-perl
+Priority: optional
+Section: perl
+Installed-Size: 66
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Version: 0.36-1
+Depends: perl (>= 5.18.1-5), perlapi-5.18.1, libc6 (>= 2.2.5)
+Filename: debs/libclone-perl_0.36-1_amd64.deb
+Size: 11888
+MD5sum: 8d1151e84cbe6ed265be96a1015e2116
+SHA1: 9226ac13eeda2c75f43bd89a361a7df7c9ad3261
+SHA256: dcaeaf8514d407b5f810674a1da994eafd5457d9018d6c205c0f484526528f00
+SHA512: 3c059684b5bd37ef2a0114ef1a7213adf704d65b53f149af67da3a25b96325e19a85c3711b3385ec376e550f7a1ff18dc8a4d1a4332cbb7373257354d0045b84
+Description: module for recursively copying Perl datatypes
+ The Clone module provides a clone() method which makes recursive copies of
+ nested hash, array, scalar and reference types, including tied variables and
+ objects.
+ .
+ It is faster (although less flexible) than Storable's dclone. Its
+ functionality is _not_ serializing in-memory objects (i.e. as
+ Data::Dumper or YAML::Dump do), but deep-copying them over to new
+ in-memory structures.
+Homepage: https://metacpan.org/release/Clone/
+
+Package: jq
+Priority: optional
+Section: utils
+Installed-Size: 289
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Simon Elsbrock <simon@iodev.org>
+Architecture: amd64
+Version: 1.3-1.1ubuntu1
+Depends: libc6 (>= 2.14)
+Filename: debs/jq_1.3-1.1ubuntu1_amd64.deb
+Size: 98692
+MD5sum: abcf3e3cb4b1357677e38fec2394e914
+SHA1: cd5e610256dd1e7b1324a29358f16489dbcdf10b
+SHA256: 60ce04532d4b4787c90e3904d2c5d3c7af69a08b85b0013bea661423e0a152a5
+SHA512: bc11026b9fa66ee68c66cde6b7a18eb912c1bd0aaf05d657d747df74c11aba29b53f8022fa9a00fa7d2041af6a8f529c44675f82662f4dfcb533e8928a833126
+Description: lightweight and flexible command-line JSON processor
+ jq is like sed for JSON data – you can use it to slice
+ and filter and map and transform structured data with
+ the same ease that sed, awk, grep and friends let you
+ play with text.
+ .
+ It is written in portable C, and it has zero runtime
+ dependencies.
+ .
+ jq can mangle the data format that you have into the
+ one that you want with very little effort, and the
+ program to do so is often shorter and simpler than
+ you’d expect.
+Homepage: https://github.com/stedolan/jq
+
+Package: sysstat
+Priority: optional
+Section: admin
+Installed-Size: 856
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Robert Luberda <robert@debian.org>
+Architecture: amd64
+Version: 10.2.0-1
+Depends: bzip2, lsb-base (>= 3.0-6), ucf (>= 2.003), debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.14), libsensors4 (>= 1:3.0.0)
+Recommends: cron
+Suggests: isag
+Filename: debs/sysstat_10.2.0-1_amd64.deb
+Size: 291420
+MD5sum: 4f25e2ad0d89e457a7079b85a5891e1e
+SHA1: 5b36d1e385b781b206588675b7826af052e8a7b9
+SHA256: d440a83b116ce2268320c387088d4639c949da7f2cada4c6d43c66bdc53bf392
+SHA512: bc7365e0fb58b0c766dc6ee8006a06f6b988dbfabe2cc83a75be83b6ea81b0172adf90e3c825cccced710c304459ef7f303cd9ed9da3fdc0a2f78430ea51cfc3
+Description: system performance tools for Linux
+ The sysstat package contains the following system performance tools:
+  - sar: collects and reports system activity information;
+  - iostat: reports CPU utilization and disk I/O statistics;
+  - mpstat: reports global and per-processor statistics;
+  - pidstat: reports statistics for Linux tasks (processes);
+  - sadf: displays data collected by sar in various formats;
+  - nfsiostat: reports I/O statistics for network filesystems;
+  - cifsiostat: reports I/O statistics for CIFS filesystems.
+ .
+ The statistics reported by sar deal with I/O transfer rates,
+ paging activity, process-related activities, interrupts,
+ network activity, memory and swap space utilization, CPU
+ utilization, kernel activities and TTY statistics, among
+ others. Both UP and SMP machines are fully supported.
+Homepage: http://pagesperso-orange.fr/sebastien.godard/
+

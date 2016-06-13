@@ -1,0 +1,5 @@
+{
+    "http://192.168.1.234:8081/config/zabbix/zabbix-server/sysctl.sh": "/config/init/sysctl.sh",
+    "http://192.168.1.234:8081/config/zabbix/zabbix-server/alert.d/sendmail.sh": "/etc/zabbix/alert.d/sendmail.sh",
+    "http://192.168.1.234:8081/config/zabbix/zabbix-server/zabbix_server.conf": "/etc/zabbix/zabbix_server.conf"
+}

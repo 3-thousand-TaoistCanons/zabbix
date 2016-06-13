@@ -1,5 +1,0 @@
-{
-    "http://--CONFIGSERVER_IP--:--CONFIGSERVER_PORT--/config/zabbix/zabbix-server/sysctl.sh": "/config/init/sysctl.sh",
-    "http://--CONFIGSERVER_IP--:--CONFIGSERVER_PORT--/config/zabbix/zabbix-server/alert.d/sendmail.sh": "/etc/zabbix/alert.d/sendmail.sh",
-    "http://--CONFIGSERVER_IP--:--CONFIGSERVER_PORT--/config/zabbix/zabbix-server/zabbix_server.conf": "/etc/zabbix/zabbix_server.conf"
-}
