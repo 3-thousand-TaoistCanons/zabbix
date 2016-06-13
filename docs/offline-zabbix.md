@@ -102,7 +102,7 @@ Template shurenyun-offline discovery
 
 小技巧：Link new templates 输入框 "type here to search" ，可以直接填写目录模板搜索再选中
 
-![alt text](images/create_host_temp.png "create_host_temp")
+![alt text](./images/create_host_temp.png "create_host_temp")
 
 #### 4.5 Host 列表
 ![alt text](images/host_list.png "host_list")
