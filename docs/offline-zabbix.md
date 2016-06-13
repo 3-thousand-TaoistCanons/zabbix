@@ -69,15 +69,28 @@ curl -Ls http://10.3.10.47:80/config/zabbix/zabbix-agent/install.sh|bash
 
 ## 4. 在zabbix server 添加数人云主机监控，如果有两台主机，重复下面动作
 
-#### 4.1 点开添加Host页面
+#### 4.1 修改线下监控数人云web模板 
+
+shurenyun-offline 模板中默认的web监控地址为 offlinewww.shurenyun.com/offlinedashboard.shurenyun.com/offlineforward.shurenyun.com
+
+需要在安装后模板中修改为线下部署实际的地址，如： http://192.168.1.234
+
+如图：
+
+![alt text](images/web_temp.png "web_temp")
+![alt text](images/web_temp_name.png "web_temp_name")
+![alt text](images/web_temp_val.png "web_temp_val")
+
+
+#### 4.2 点开添加Host页面
 ![alt text](images/pre_create_host.png "pre_create_host")
 
-#### 4.2 配置Host页面
+#### 4.3 配置Host页面
 ![alt text](images/create_host_host.png "create_host_host")
 
-#### 4.3 配置Host关联的Template
+#### 4.4 配置Host关联的Template
 
-数人云主机关联的模板列表
+数人云主机关联的模板列表(模板列表根据主机的服务模块酌情修改)
 
 ```
 Template App RabbitMQ v3
@@ -87,22 +100,14 @@ Template redis discovery
 Template shurenyun-offline discovery
 ```
 
-注意: 
-
-shurenyun-offline 模板中默认的web监控地址为 offlinewww.shurenyun.com/offlinedashboard.shurenyun.com/offlineforward.shurenyun.com
-
-需要在安装前在zabbix/zabbix_init.sql 文件中修改为线下部署实际的地址
-或在安装后在Templates 中修改
-
 小技巧：Link new templates 输入框 "type here to search" ，可以直接填写目录模板搜索再选中
-
 
 ![alt text](images/create_host_temp.png "create_host_temp")
 
-#### 4.4 Host 列表
+#### 4.5 Host 列表
 ![alt text](images/host_list.png "host_list")
 
-#### 4.5 添加zabbix server host
+#### 4.6 添加zabbix server host
 
 添加流程参考前面4项，
 
