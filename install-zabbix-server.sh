@@ -76,9 +76,9 @@ check_http zabbix-server "http://$ZBX_SERVER_IP:9280/"
 
 
 echo
-echo "zabbix server addr: http://$ZBX_SERVER_IP:9280/"
+echo "zabbix server addr: http://$ZBX_SERVER_IP:9280/"|tee zabbix_addr.txt
 echo "default user: admin"
 echo "default pass: zabbix"
 echo
 echo "Add the zabbix agent for the need to monitor the host"
-grep 'Usega:' $BASE_DIR/configserver/config/zabbix/zabbix-agent/install.sh
+grep 'Usega:' $BASE_DIR/configserver/config/zabbix/zabbix-agent/install.sh|tee install_agent.txt
