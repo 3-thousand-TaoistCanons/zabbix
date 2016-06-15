@@ -1,0 +1,7 @@
+configserver:
+  image: index.shurenyun.com/centos7/nginx-1.8.0:20160307202745
+  net: host
+  volumes:
+    - ./conf.d:/etc/nginx/conf.d
+    - ./config:/data/config
+    - ./packages:/data/packages

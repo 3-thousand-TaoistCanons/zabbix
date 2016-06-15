@@ -1,0 +1,5 @@
+*.tar
+configserver/conf.d/
+configserver/config
+install_agent.txt
+zabbix_addr.txt
