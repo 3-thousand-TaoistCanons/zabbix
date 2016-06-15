@@ -6,5 +6,6 @@ images=`ls *.tar`
 
 for i in $images
 do
+     echo "load $i"
      docker load < $i
 done
