@@ -5,6 +5,8 @@
 export BASE_DIR=$(cd `dirname $0` && pwd)
 cd $BASE_DIR
 
+./images/load_images.sh
+
 ./build_zabbix_config.sh
 . ./config.cfg
 
