@@ -7,7 +7,5 @@ mysql:
     - NOHOSTNAME=true
     - MYSQL_ROOT_PASSWORD=--ZBX_MYSQL_ROOT_PASS--
     - MYSQL_DATABASE=--ZBX_MYSQL_DATABASE--
-#  env_file:
-#    - ./mysql.env
   volumes:
     - /data/volumn/mysql:/var/lib/mysql:rw

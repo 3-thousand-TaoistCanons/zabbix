@@ -2,12 +2,10 @@ mysql:
   image: index.shurenyun.com/centos7/mysql-5.6.26:20160316183811
   net: host
   environment:
-    - CONFIG_SERVER=http://192.168.1.234:8081
+    - CONFIG_SERVER=http://192.168.99.100:8081
     - SERVICE=zabbix/zabbix-mysql
     - NOHOSTNAME=true
     - MYSQL_ROOT_PASSWORD=dataman1234
     - MYSQL_DATABASE=zabbix
-#  env_file:
-#    - ./mysql.env
   volumes:
     - /data/volumn/mysql:/var/lib/mysql:rw
