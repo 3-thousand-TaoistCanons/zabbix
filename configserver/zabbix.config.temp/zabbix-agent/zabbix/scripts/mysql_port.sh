@@ -1,7 +1,7 @@
 #!/bin/bash
 DIR=/etc/mysql
 discovery() {
-            port=(`netstat -lntp|awk '/mysqld/{print $4}'|grep -o ":.*"|grep -o '[0-9]*'`)
+            port=3306
             printf '{\n'
             printf '\t"data":[\n'
                    for key in ${!port[@]}
