@@ -2,7 +2,7 @@ zabbix-server:
   image: index.shurenyun.com/centos7/zabbix2.4-server:20160318222726
   net: host
   environment:
-    - CONFIG_SERVER=http://192.168.1.233:8081
+    - CONFIG_SERVER=http://10.3.10.33:8081
     - SERVICE=zabbix/zabbix-server
     - NOHOSTNAME=true
 
@@ -10,6 +10,6 @@ zabbix-web:
   image: index.shurenyun.com/centos7/zabbix2.4-web:20160414194305
   net: host
   environment:
-    - CONFIG_SERVER=http://192.168.1.233:8081
+    - CONFIG_SERVER=http://10.3.10.33:8081
     - SERVICE=zabbix/zabbix-web
     - NOHOSTNAME=true
