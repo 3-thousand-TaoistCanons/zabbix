@@ -46,6 +46,10 @@ ZBX_MYSQL_USER="zabbix"
 ZBX_MYSQL_PASS="zabbixpass"          ## Need to check
 ZBX_MYSQL_DATABASE="zabbix"          
 
+# zabbix agent rabbitmq 验证信息
+ZBX_AGENT_RABBITMQ_USER="admin"         ## Need to check
+ZBX_AGENT_RABBITMQ_PASS="dataman"       ## Need to check
+
 
 ## 2. 安装zabbix server
 
