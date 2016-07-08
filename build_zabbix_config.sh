@@ -18,6 +18,8 @@ replace_var(){
     echo $files | xargs sed -i 's#--ZBX_MYSQL_CHECK_USER--#'$ZBX_MYSQL_CHECK_USER'#g'
     echo $files | xargs sed -i 's#--ZBX_MYSQL_CHECK_PASS--#'$ZBX_MYSQL_CHECK_PASS'#g'
     echo $files | xargs sed -i 's#--ZBX_SERVER_IP--#'$ZBX_SERVER_IP'#g'
+    echo $files | xargs sed -i 's#--ZBX_AGENT_RABBITMQ_USER--#'$ZBX_AGENT_RABBITMQ_USER'#g'
+    echo $files | xargs sed -i 's#--ZBX_AGENT_RABBITMQ_PASS--#'$ZBX_AGENT_RABBITMQ_PASS'#g'
     
     echo $files | xargs sed -i 's#--MYSQL_IMAGE_URI--#'$MYSQL_IMAGE_URI'#g'
     echo $files | xargs sed -i 's#--MYSQL_IMAGE_VERSION--#'$MYSQL_IMAGE_VERSION'#g'

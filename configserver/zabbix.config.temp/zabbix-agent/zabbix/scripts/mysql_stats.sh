@@ -1,7 +1,7 @@
 #!/bin/bash
 
-MYSQL_PWD="--ZBX_MYSQL_PASS--"
-PARAM="-u--ZBX_MYSQL_USER-- -p$MYSQL_PWD -P $2 -h 127.0.0.1"
+MYSQL_PWD="--ZBX_MYSQL_CHECK_PASS--"
+PARAM="-u--ZBX_MYSQL_CHECK_USER-- -p$MYSQL_PWD -P $2 -h 127.0.0.1"
 MYSQLADMIN="/usr/bin/mysqladmin"
 MYSQL="/usr/bin/mysql"
 

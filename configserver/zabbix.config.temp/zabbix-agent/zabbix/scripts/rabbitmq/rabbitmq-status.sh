@@ -14,6 +14,11 @@ NODE=$3
 if [[ -z "$HOSTNAME" ]]; then
     HOSTNAME=`hostname`
 fi
+
+if [[ -z "$NODE" ]]; then
+    NODE=`hostname -i`
+fi
+
 if [[ -z "$NODE" ]]; then
     NODE=`hostname`
 fi
