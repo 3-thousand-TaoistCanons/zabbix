@@ -227,5 +227,21 @@ case "$1" in
                ;;
      Engine_select)
                echo $($MYSQL $PARAM -e "show global status like 'Table_locks_immediate';" 2>/dev/null| grep -v Value |awk '{print $2}') $($MYSQL $PARAM -e "show global status like 'table_locks_waited';" 2>/dev/null| grep -v Value |awk '{print $2}')| awk '{if($2==0){print "0"}else{printf("%5.4f\n",$1/$2)}}'
+		;;
+     wsrep_incoming_addresses)
+               $MYSQL $PARAM -e "show global status like 'wsrep_incoming_addresses';" 2>/dev/null|grep -v Value|awk '{print $2}'
+                ;;
+     wsrep_cluster_status)
+               $MYSQL $PARAM -e "show global status like 'wsrep_cluster_status';" 2>/dev/null|grep -v Value|awk '{print $2}'
+                ;;
+    wsrep_local_state_comment)
+              $MYSQL $PARAM -e "show global status like 'wsrep_local_state_comment';" 2>/dev/null|grep -v Value|awk '{print $2}'
+                ;;
+    wsrep_cluster_size)
+              $MYSQL $PARAM -e "show global status like 'wsrep_cluster_size';" 2>/dev/null|grep -v Value|awk '{print $2}'
+                ;;
+    wsrep_ready)
+              $MYSQL $PARAM -e "show global status like 'wsrep_ready';" 2>/dev/null|grep -v Value|awk '{print $2}'
+                ;;
 
 esac
