@@ -24,7 +24,6 @@ zabbix-mysql | 2核 4G内存 | 4核8G内存及以上| 无
 需要注意检查修改的内容 如下：
 
 ```
-...
 
 # zabbix 使用的configserver地址
 
@@ -50,6 +49,7 @@ ZBX_MYSQL_DATABASE="zabbix"
 ZBX_AGENT_RABBITMQ_USER="admin"         ## Need to check
 ZBX_AGENT_RABBITMQ_PASS="dataman"       ## Need to check
 
+```
 
 ## 2. 安装zabbix server
 
@@ -89,7 +89,7 @@ shurenyun-offline 模板中默认的web监控地址为 offlinewww.shurenyun.com/
 
 如图：
 
-![](images/web_temp.png)
+![](./images/web_temp.png)
 ![](images/web_temp_name.png)
 ![](images/web_temp_val.png)
 
