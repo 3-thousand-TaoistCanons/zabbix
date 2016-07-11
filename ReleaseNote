@@ -2,6 +2,8 @@
 
 加入了Mysql 集群监控
 
+zabbix agent 监控mysql用户 从ZBBBIX_USER 修改为  ZABBIX_CHECK_USER 
+
 修复了 rabbitmq  主机名跟节点名不对应， parations not found（要求/etc/host中有当前主机名解析）
 
 加入elasticearch 2.x 监控支持
