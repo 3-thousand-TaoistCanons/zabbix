@@ -1,3 +1,5 @@
+2016-07-09
+
 加入了Mysql 集群监控
 
 修复了 rabbitmq  主机名跟节点名不对应， parations not found（要求/etc/host中有当前主机名解析）
