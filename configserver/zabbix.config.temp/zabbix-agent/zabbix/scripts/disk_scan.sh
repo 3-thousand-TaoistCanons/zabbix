@@ -1,5 +1,5 @@
 #!/bin/bash
-disklist=(`cat /proc/diskstats |grep -E "\xvd[a-z]\b|\bvd[a-z]\b"|awk '{print $3}'|sort|uniq 2>/dev/null`)
+disklist=(`cat /proc/diskstats |grep -E "\xvd[a-z]\b|\bvd[a-z]\b|\bsd[a-z]\b"|awk '{print $3}'|sort|uniq 2>/dev/null`)
 #diskarray=(`cat /proc/diskstats |grep -E "\xvd[abcdefg]\b|\bvd[abcdefg]\b"|awk '{print $3}'|sort|uniq   2>/dev/null`)
 length=${#disklist[@]}
 printf "{\n"
