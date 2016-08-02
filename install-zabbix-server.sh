@@ -5,7 +5,7 @@
 export BASE_DIR=$(cd `dirname $0` && pwd)
 cd $BASE_DIR
 
-./images/load_image.sh || exit 1
+#./images/load_image.sh || exit 1
 
 ./build_zabbix_config.sh
 . ./config.cfg
@@ -37,17 +37,18 @@ check_http(){
 check_mysql_health (){
   for i in  `seq 1 61`
   do
+    echo "check mysql "
     mysql -uroot -p$ZBX_MYSQL_ROOT_PASS -h$ZBX_MYSQL_IP -e "show status;" >/dev/null 2>&1
     if [ $? -ne 0 ] ;then
        if [ "$i" -gt "60" ];then
 		echo "check mysql is error !!!" && exit 1
        fi
-       echo "check mysql $i "
+       echo -n "."
     else
        echo "deploy mysql is ok !!!"
        break
     fi
-    sleep 1
+    sleep 3
   done
 }
 
